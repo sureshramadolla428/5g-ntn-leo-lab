@@ -1,0 +1,9 @@
+# Sample LEO TLE for lab orbit exporter (SGP4).
+# Source: Celestrak public ISS (ZARYA) NORAD 25544 — replace with YOUR satellite.
+# Honesty: SGP4/TLE model only — NOT live OTA GPS. Accuracy degrades with TLE age;
+# refresh from https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=tle
+# (or your operator's ephemeris) when epoch is more than a few days old.
+#
+ISS (ZARYA)
+1 25544U 98067A   26208.82999464  .00012208  00000+0  22756-3 0  9996
+2 25544  51.6325  98.9640 0006981 344.4565  15.6209 15.49215570578052

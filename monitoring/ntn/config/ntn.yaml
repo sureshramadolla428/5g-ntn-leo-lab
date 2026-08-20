@@ -1,0 +1,63 @@
+﻿# NTN Lab KPI / link-budget / coverage policy — single source of named constants.
+# Loaded by grafana/ntn_kpi_exporter.py and monitoring/orbit_csv_exporter.py.
+# Path C RFsim band 254 carrier = 2488.4 MHz — use for FSPL/Doppler consistency.
+
+physics:
+  c_km_s: 299792.458
+  r_e_km: 6371.0
+  h_sat_km: 600.0
+  f_hz: 2488400000.0
+  f_hz_teaching_note: "Legacy docs may cite 2.0e9; live lab Path C uses 2.4884e9"
+  k_boltzmann_dbw_per_k_hz: -228.6
+  n_prb: 25
+  scs_khz: 15.0
+  nf_db: 7.0
+  t0_k: 290.0
+  capacity_overhead: 0.14
+  capacity_mu: 0
+  t_proc_ms: 1.0
+  feeder_elev_deg: 35.0
+  sinr_display_min_db: -5.0
+  sinr_display_max_db: 40.0
+  sinr_req_db: 0.0
+
+link_budget:
+  eirp_dbm: 110.0
+  g_rx_dbi: 0.0
+  l_atm_db: 0.5
+  l_other_db: 3.0
+  l_pattern_db_per_deg_from_zenith: 0.25
+  definition_cn0: "eirp_dbm - 30 - fspl - l_extra + gt + 228.6"
+  link_margin:
+    definition: sinr
+  consistency_eps_db: 2.0
+
+coverage:
+  elev_min_deg: 10.0
+  require_ephemeris_valid: true
+
+gating:
+  forbid_rosy_margin_db: 10.0
+  forbid_sinr_below_db: 0.0
+  oos_zero_live_capacity: true
+  uplane_down_prediction_only: true
+
+ephemeris:
+  validity_s_default: 180.0
+
+doppler:
+  initial_fo_hz: 57340.0
+  fo_residual_gain_s: 0.08
+  fo_residual_max_hz: 900.0
+
+# Lab UE / ground terminal (same defaults as orbit/two_sat_handover.py NYC-ish)
+geometry:
+  ue_lat_deg: 40.71
+  ue_lon_deg: -74.01
+  ue_alt_km: 0.0
+
+provenance:
+  geometry_source: orbit_csv_exporter_sgp4_tle
+  rf_source: ntn_kpi_exporter
+  epoch_align_tag: same_prom_cycle
+  honesty: "SGP4/TLE model geometry — not OTA GPS; not RF inject"

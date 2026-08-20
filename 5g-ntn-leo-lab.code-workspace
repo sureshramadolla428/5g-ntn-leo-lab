@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "5g-ntn-leo-lab",
+			"path": "."
+		},
+		{
+			"name": "5g-ntn-leo-lab-scripts",
+			"path": "../5g-ntn-leo-lab-scripts"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,3 @@
+# Large evidence packs generated on the VM — keep out of git / OneDrive sync noise
+*.tar.gz
+issue_evidence_*.tar.gz

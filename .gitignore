@@ -1,0 +1,43 @@
+# Captures / bulky evidence
+*.pcap
+*.pcapng
+*.mp4
+*.mov
+*.avi
+*.tar.gz
+issue_evidence_*.tar.gz
+raw-pcaps-DONT-COMMIT/
+
+# Operational scripts — private companion (../5g-ntn-leo-lab-scripts)
+*.sh
+OAI_ISSUE_RFSIM_DUAL_DU_HO/patches/
+
+# Secrets
+.env
+*.env
+*.key
+*.pem
+secrets.*
+*_secret*
+*credentials*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# OneDrive / Windows noise
+desktop.ini
+*.lnk
